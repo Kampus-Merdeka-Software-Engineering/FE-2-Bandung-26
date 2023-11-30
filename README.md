@@ -1,0 +1,1 @@
+This repository contains the front-end source code for capstone project Group 26, which consists of HTML, CSS, JavaScript files, and other assets. This source code is responsible for the look and feel of the user interface (UI) of the news portal website.
