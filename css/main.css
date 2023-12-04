@@ -13,11 +13,11 @@ font-family: 'Raleway', sans-serif;
 }
 
 :root {
-    --heading: 'Outfit', sans-serif;
+    --heading: "Outfit", sans-serif;
 }
 
 body {
-    font-family: 'Outfit', sans-serif;
+    font-family: "Outfit", sans-serif;
     background: #fff;
 }
 
@@ -61,12 +61,10 @@ hr {
     width: 100px;
 }
 
-
 .top-head .fas {
     font-size: 2rem;
     cursor: pointer;
 }
-
 
 /******* js related styling *****/
 
@@ -96,30 +94,18 @@ hr {
 .nav-bar ul li a {
     color: #fff;
     font-size: 18px;
-    /* text-transform: uppercase; */
 }
-
-/* .nav-bar ul li:hover {
-    background: #fff;
-} */
 
 .nav-bar ul li:hover a {
     color: #ff8913;
-    /* Warna teks menjadi gelap saat hover */
 }
 
-/* .nav-bar ul li a:hover {
-    text-decoration: underline;
-} */
-
 /* social -icons */
-
 .social-icons {
     display: none;
 }
 
 /* banner */
-
 .banner {
     min-height: auto;
     display: grid;
@@ -148,8 +134,9 @@ hr {
     background: #101820;
     padding: 14px 18px;
     font-size: 1.2rem;
-    font-family: 'Montserrat', sans-serif;
-    transition: background 1s ease;
+    font-family: "Montserrat", sans-serif;
+    transition: background 0.5s ease;
+    border-radius: 30px;
 }
 
 .banner-main-content button a {
@@ -164,7 +151,6 @@ hr {
 .banner-main-content button:hover a {
     color: #0d0a0b;
 }
-
 
 .current-news-head {
     background: #fff;
@@ -250,7 +236,6 @@ hr {
 }
 
 /** main ***/
-
 main a {
     padding: 15px 0;
     display: block;
@@ -270,12 +255,11 @@ main a:hover {
 }
 
 /* main container left */
-
 .main-container-left {
     padding: 30px 10px;
 }
 
-.main-container-left>h2 {
+.main-container-left > h2 {
     padding: 15px 0 15px 30px;
 }
 
@@ -304,12 +288,11 @@ main a:hover {
 }
 
 /*** main container right */
-
 .main-container-right {
     padding: 30px 10px;
 }
 
-.main-container-right>h2 {
+.main-container-right > h2 {
     padding: 15px 0 15px 30px;
 }
 
@@ -353,9 +336,7 @@ main a:hover {
     margin-right: 10px;
 }
 
-
 /****** footer *****/
-
 footer {
     background: #101820;
     color: #f3f3f3;
@@ -378,13 +359,10 @@ footer p {
 
 .footer-left img {
     width: 100px;
-    /* Atur lebar gambar sesuai kebutuhan */
     height: auto;
-    /* Biarkan ketinggiannya menyesuaikan proporsi */
 }
 
-
-footer>p {
+footer > p {
     text-align: center;
     opacity: 0.8;
     margin-top: 20px;
@@ -414,9 +392,7 @@ footer>p {
     border-bottom: 1.6px solid #808080;
 }
 
-
-
-@media(max-width: 460px) {
+@media (max-width: 460px) {
     .hot-topic-content h2 {
         font-size: 16px;
     }
@@ -428,11 +404,9 @@ footer>p {
     .main-container-right article img {
         display: none;
     }
-
-
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
     .main-container-right article {
         grid-template-columns: 1fr 3fr;
         grid-template-rows: 1fr 1fr;
@@ -455,8 +429,7 @@ footer>p {
     }
 }
 
-
-@media(min-width: 768px) {
+@media (min-width: 768px) {
     .banner-sub-content {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -466,12 +439,9 @@ footer>p {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
-
-@media(min-width: 800px) {
-
+@media (min-width: 800px) {
     /* nav */
     .ham-btn,
     .times-btn {
@@ -540,14 +510,14 @@ footer>p {
     }
 }
 
-@media(min-width: 992px) {
+@media (min-width: 992px) {
     main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media(min-width: 1080px) {
+@media (min-width: 1080px) {
     .banner {
         grid-template-columns: 1fr 2fr;
     }
