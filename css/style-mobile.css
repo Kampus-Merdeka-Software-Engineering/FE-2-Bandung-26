@@ -1,0 +1,76 @@
+@media screen and (max-width: 767px) {
+    /* Start - Header */
+    section.navbar {
+        display: none;
+    }
+
+    header section {
+        margin: 20px 20px;
+    }
+
+    .jumbotron {
+        max-height: 150px;
+        text-align: center;
+    }
+
+    .jumbotron h1 {
+        margin-bottom: 10px;
+    }
+    /* End - Header */
+
+    /* Start - Main */
+    main section {
+        padding: 0 30px;
+    }
+
+    /* Start - article-value */
+    main section.article-value div {
+        flex-basis: 100%;
+        margin-bottom: 25px;
+    }
+    /* End - article-value */
+
+    /* Start - article-profile */
+    main section.article-profile {
+        padding-block: 10px;
+    }
+
+    main section.article-profile div {
+        flex-basis: 100%;
+    }
+
+    .article-profile div img {
+        max-height: 300px;
+        object-fit: cover;
+        padding-inline-end: 0;
+        padding-bottom: 10px;
+    }
+    /* Start - article-profile */
+
+    /* Start - article-service */
+    .carousel img {
+        max-height: 350px;
+    }
+    /* End - article-service */
+
+    /* Start - article-contact */
+    .article-contact div {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .article-contact > div:nth-child(1) h2 {
+        text-align: center;
+    }
+    /* End - article-contact */
+    /* End - Main */
+
+    footer section {
+        padding: 20px 40px;
+    }
+
+    .footer-text p {
+        font-size: 0.6rem;
+        line-height: 0.9rem;
+    }
+}
