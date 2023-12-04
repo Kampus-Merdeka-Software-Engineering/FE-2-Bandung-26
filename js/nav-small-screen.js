@@ -17,26 +17,26 @@ class NavSmallScreen extends HTMLElement {
         <div class="logo">
             <a href="#"><img src="assets/logo/logo-bg-dark-small.png" alt="Naratif Indonesia" /></a>
         </div>
-        <button id="nav-small-screen__button">
+        <button id="nav-small-screen-button">
             <div></div>
             <div></div>
             <div></div>
         </button>
         </div>
 
-        <div id="nav-small-screen__menu" style="display: none;">
+        <div id="nav-small-screen-menu" style="display: none;">
             <div><a href="#header">Beranda</a></div>
             <div><a href="#article-profile">Tentang Kami</a></div>
             <div><a href="#article-service">Layanan</a></div>
             <div><a href="#article-members">Tim</a></div>
-            <div><a href="#">Berita</a></div>
+            <div><a href="news.html">Berita</a></div>
         </div>
     `;
     }
 
     #onClick() {
-        const humburgerButton = document.getElementById("nav-small-screen__button");
-        const menu = document.getElementById("nav-small-screen__menu");
+        const humburgerButton = document.getElementById("nav-small-screen-button");
+        const menu = document.getElementById("nav-small-screen-menu");
         humburgerButton.onclick = () => {
             this.isOpen = !this.isOpen;
             if (this.isOpen) {
@@ -48,7 +48,7 @@ class NavSmallScreen extends HTMLElement {
     }
 
     #onClickChildMenu() {
-        const menu = document.getElementById("nav-small-screen__menu");
+        const menu = document.getElementById("nav-small-screen-menu");
 
         for (let i = 0; i < menu.children.length; i++) {
             menu.children[i].onclick = () => {

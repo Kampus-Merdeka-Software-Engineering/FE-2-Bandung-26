@@ -1,58 +1,56 @@
 nav-small-screen {
-  padding: 20px;
-  position: sticky;
-  top: 0;
-  left: 0;
-  background-color: #101820;
-  width: 100%;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #101820;
+    width: 100%;
 }
 
 nav-small-screen button {
-  width: 30px; 
-  height: 30px;
-  background-color: transparent; 
-  border: none; 
-  gap: .5rem; 
-  cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    gap: 0.5rem;
+    cursor: pointer;
 }
 
 nav-small-screen button div {
-  height: 2px; 
-  width: 100%; 
-  background-color: white;
+    height: 2px;
+    width: 100%;
+    background-color: white;
 }
 
-nav-small-screen #nav-small-screen__menu {
-  display: none;
-  width: 100%;
-  background-color: #101820;
-  left: 0;
-  padding-top: 1rem;
-  /* box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;   */
+nav-small-screen #nav-small-screen-menu {
+    display: none;
+    width: 100%;
+    background-color: #101820;
+    left: 0;
+    padding-top: 1rem;
 }
 
-nav-small-screen #nav-small-screen__menu > div {
-  padding: 1rem 0;
+nav-small-screen #nav-small-screen-menu > div {
+    padding: 1rem 0;
 }
 
-nav-small-screen #nav-small-screen__menu > div > a {
-  color: white;
-  text-decoration: none;
+nav-small-screen #nav-small-screen-menu > div > a {
+    color: white;
+    text-decoration: none;
 }
 
-nav-small-screen #nav-small-screen__menu > div > a:active {
-  color: red;
+nav-small-screen #nav-small-screen-menu > div > a:active {
+    color: red;
 }
-
 
 @media screen and (min-width: 768px) {
-  nav-small-screen {
-    display: none;
-  }
+    nav-small-screen {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 767px) {
-  nav-small-screen button {
-    display: grid;
-  }
+    nav-small-screen button {
+        display: grid;
+    }
 }
