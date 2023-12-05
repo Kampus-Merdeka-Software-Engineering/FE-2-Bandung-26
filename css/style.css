@@ -28,7 +28,7 @@ section.navbar {
 }
 
 nav {
-    flex: 1;
+    flex: 1.5;
 }
 
 nav ul {
@@ -40,6 +40,7 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     color: inherit;
+    padding: 5px 10px;
 }
 
 .jumbotron {
