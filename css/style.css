@@ -1,4 +1,3 @@
-/* Start - Header */
 header {
     display: flex;
     flex-direction: column;
@@ -50,32 +49,28 @@ nav ul li a {
     align-items: center;
     height: 300px;
 }
-/* End - Header */
 
-/* Start - Main */
 main {
     display: flex;
     flex-direction: column;
 }
 
-main > section {
+main>section {
     display: flex;
     padding: 0 100px;
     flex-wrap: wrap;
 }
 
-/* Start - article-value */
 .article-value {
     padding-block: 35px;
     flex-wrap: wrap;
 }
 
+
 main section.article-value div {
     flex: 1;
 }
-/* End - article-value */
 
-/* Start - article-profile */
 .article-profile {
     padding-block: 35px;
     flex-wrap: wrap;
@@ -91,9 +86,7 @@ main section.article-value div {
     width: 100%;
     border-top-left-radius: 100px;
 }
-/* End - article-profile */
 
-/* Start - article-service */
 .article-service {
     padding-block: 35px;
     flex-direction: column;
@@ -125,7 +118,7 @@ main section.article-value div {
     display: none;
 }
 
-.carousel > div {
+.carousel>div {
     flex: 0 0 auto;
     scroll-snap-align: start;
     border-radius: 8px;
@@ -136,6 +129,7 @@ main section.article-value div {
     width: 100%;
     border-radius: 8px;
 }
+
 /* End - article-services */
 
 /* Start - article-members */
@@ -185,9 +179,7 @@ main section.article-value div {
     margin: 5px;
     width: 30px;
 }
-/* End - article-members */
 
-/*  Start - article-contact*/
 .article-contact {
     padding-block: 35px;
     flex-wrap: wrap;
@@ -204,12 +196,12 @@ main section.article-value div {
     border-bottom-right-radius: 100px;
 }
 
-.contact-us > a {
+.contact-us>a {
     color: inherit;
     text-decoration: none;
 }
 
-.contact-us > a:hover {
+.contact-us>a:hover {
     color: #ffbd59;
 }
 
@@ -235,10 +227,7 @@ textarea {
     font-family: inherit;
     color: black;
 }
-/*  End - article-contact*/
-/* End - Main */
 
-/* Start - Footer */
 footer {
     background-color: #101820;
     color: white;
@@ -264,4 +253,3 @@ footer div {
 .footer-text {
     justify-content: end;
 }
-/* End - Footer */
