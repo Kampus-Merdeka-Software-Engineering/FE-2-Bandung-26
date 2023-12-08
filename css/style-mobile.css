@@ -1,14 +1,14 @@
 @media screen and (max-width: 767px) {
+    header {
+        padding: 0;
+    }
+
     section.navbar {
         display: none;
     }
 
-    header section {
-        margin: 20px 20px;
-    }
-
     .jumbotron {
-        max-height: 150px;
+        max-height: 250px;
         text-align: center;
     }
 
@@ -41,7 +41,9 @@
     }
 
     .carousel img {
-        max-height: 350px;
+        object-fit: cover;
+        width: 325px;
+        max-height: 400px;
     }
 
     .article-contact div {
@@ -49,7 +51,7 @@
         margin-bottom: 20px;
     }
 
-    .article-contact>div:nth-child(1) h2 {
+    .article-contact > div:nth-child(1) h2 {
         text-align: center;
     }
 

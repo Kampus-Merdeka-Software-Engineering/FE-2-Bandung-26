@@ -24,7 +24,7 @@ const beritaTerkini = (berita) => {
     const section = document.getElementById("berita-terkini");
     const articles = section.querySelectorAll("article");
 
-    const beritaCuaca = berita.filter(item => item.status === "berita-terkini-utama");
+    const beritaCuaca = berita.filter((item) => item.status === "berita-terkini-utama");
 
     beritaCuaca.slice(0, 5).forEach((news, index) => {
         const currentArticle = articles[index];
@@ -42,7 +42,6 @@ const beritaTerkini = (berita) => {
     });
 };
 
-
 const tambahkanBeritaKeHTML = (berita) => {
     const section = document.getElementById("berita-terpopuler");
     const containerTopLeft = section.querySelector(".container-top-left");
@@ -52,7 +51,7 @@ const tambahkanBeritaKeHTML = (berita) => {
     const containerBottomLeft = section.querySelector(".container-bottom-left");
     const bottomArticles = containerBottomLeft.querySelectorAll("article");
 
-    const beritaOlahraga = berita.filter(item => item.status === "berita-terpopuler-utama");
+    const beritaOlahraga = berita.filter((item) => item.status === "berita-terpopuler-utama");
 
     if (beritaOlahraga.length >= 3) {
         const topBerita = beritaOlahraga[0];
@@ -83,7 +82,7 @@ const tambahkanBeritaKeHTML = (berita) => {
 const populateHeadlines = (berita) => {
     const currentNewsHead = document.querySelector(".current-news-head");
 
-    const filteredBerita = berita.filter(item => item.status === "berita-terkini-utama" || item.status === "berita-terpopuler-utama");
+    const filteredBerita = berita.filter((item) => item.status === "berita-terkini-utama" || item.status === "berita-terpopuler-utama");
 
     filteredBerita.slice(0, 4).forEach((news) => {
         const headline = document.createElement("h3");
