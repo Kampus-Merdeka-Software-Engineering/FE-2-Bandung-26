@@ -2,20 +2,25 @@ header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: #101820;
+    background: linear-gradient(0deg, rgba(16, 24, 32, 0.8) 100%, transparent 100%), url(../assets/banner.jpg);
     color: #fff;
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
-}
-
-header section {
-    margin: 20px 100px;
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 80px 100px;
 }
 
 section.navbar {
     display: flex;
-    background-color: #101820;
     align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 20px 100px;
+    background: linear-gradient(to bottom, #101820 30%, transparent);
 }
 
 .logo {
@@ -24,6 +29,12 @@ section.navbar {
 
 .logo img {
     width: 100px;
+    transition: transform 0.3s ease;
+}
+
+.logo a:hover img,
+.logo a:focus img {
+    transform: scale(1.1);
 }
 
 nav {
@@ -40,6 +51,24 @@ nav ul li a {
     text-decoration: none;
     color: inherit;
     padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 30px;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #ffd700;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav ul li a:active {
+    color: #ffa500;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+nav ul li.active a {
+    color: #ffd700;
+    background-color: rgba(255, 215, 0, 0.5);
 }
 
 .jumbotron {
@@ -55,7 +84,7 @@ main {
     flex-direction: column;
 }
 
-main>section {
+main > section {
     display: flex;
     padding: 0 100px;
     flex-wrap: wrap;
@@ -65,7 +94,6 @@ main>section {
     padding-block: 35px;
     flex-wrap: wrap;
 }
-
 
 main section.article-value div {
     flex: 1;
@@ -104,6 +132,11 @@ main section.article-value div {
     text-align: center;
 }
 
+.carousel-container {
+    position: relative;
+    width: 100%;
+}
+
 .carousel {
     width: 100%;
     display: flex;
@@ -118,21 +151,79 @@ main section.article-value div {
     display: none;
 }
 
-.carousel>div {
+.carousel > div {
+    position: relative;
     flex: 0 0 auto;
     scroll-snap-align: start;
     border-radius: 8px;
     overflow: hidden;
 }
 
-.carousel img {
+.carousel > div::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    border-radius: 8px;
+    height: 100%;
+    background: linear-gradient(to top, #101820, transparent);
+    z-index: 1;
 }
 
-/* End - article-services */
+.carousel > div .text-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    z-index: 2;
+    text-align: center;
+    font-size: 20px;
+}
 
-/* Start - article-members */
+.carousel img {
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.carousel > div:hover img {
+    transform: scale(1.05);
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 3;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-button.left {
+    left: 0;
+}
+
+.carousel-button.right {
+    right: 0;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 .article-members {
     display: flex;
     padding-block: 35px;
@@ -180,6 +271,18 @@ main section.article-value div {
     width: 30px;
 }
 
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-social a:hover img {
+    filter: brightness(1.2);
+    transform: scale(1.2);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
 .article-contact {
     padding-block: 35px;
     flex-wrap: wrap;
@@ -196,12 +299,12 @@ main section.article-value div {
     border-bottom-right-radius: 100px;
 }
 
-.contact-us>a {
+.contact-us > a {
     color: inherit;
     text-decoration: none;
 }
 
-.contact-us>a:hover {
+.contact-us > a:hover {
     color: #ffbd59;
 }
 
@@ -211,6 +314,10 @@ textarea {
     resize: none;
     padding: 5px;
     font-family: inherit;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .form-contact-us textarea {
@@ -226,6 +333,12 @@ textarea {
     font-size: 1rem;
     font-family: inherit;
     color: black;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.form-contact-us button:hover {
+    background-color: #ffa500;
+    transform: scale(1.05);
 }
 
 footer {

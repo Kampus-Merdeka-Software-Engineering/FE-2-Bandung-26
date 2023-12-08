@@ -1,13 +1,9 @@
 @media screen and (min-width: 897px) and (max-width: 1024px) {
-    header section {
-        margin: 20px 80px;
-    }
-
     nav {
         flex: 2;
     }
 
-    main>section {
+    main > section {
         padding: 0 80px;
     }
 
@@ -17,15 +13,11 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 896px) {
-    header section {
-        margin: 20px 80px;
-    }
-
     nav {
-        flex: 2;
+        flex: 4;
     }
 
-    main>section {
+    main > section {
         padding: 0 80px;
     }
 
