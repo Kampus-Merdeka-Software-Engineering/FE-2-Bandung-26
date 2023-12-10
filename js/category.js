@@ -1,27 +1,32 @@
 const API_URL = "https://be-2-bandung-26-production.up.railway.app";
 
 document.addEventListener("DOMContentLoaded", async () => {
-    if (window.location.pathname.includes("news.html")) {
-        await fetchAllBerita();
+    const urlParams = new URLSearchParams(window.location.search);
+    const topik = urlParams.get('topik');
+
+    if (topik) {
+        await fetchBeritaByTopik(topik);
     }
 });
 
-const fetchAllBerita = async () => {
+const fetchBeritaByTopik = async (topik) => {
     try {
-        const response = await fetch(`${API_URL}/berita`);
+        const endpoint = `${API_URL}/berita/topik/${topik}`;
+        const response = await fetch(endpoint);
         const berita = await response.json();
+
         console.log(berita);
-        searchAllBerita(berita.data);
-        populateHeadlines(berita.data);
-        beritaBanner(berita.data);
-        beritaTerpopuler(berita.data);
-        beritaTerkini(berita.data);
+        searchingAllBerita(berita.data);
+        displayHeadlines(berita.data);
+        displayBanner(berita.data);
+        displayBeritaTerpopuler(berita.data);
+        displayBeritaTerkini(berita.data);
     } catch (error) {
         console.error("Error", error);
     }
 };
 
-const searchAllBerita = (berita) => {
+const searchingAllBerita = (berita) => {
     const searchForm = document.getElementById("searchForm");
     searchForm.addEventListener("submit", async (event) => {
         event.preventDefault();
@@ -53,19 +58,17 @@ const updateFrontend = (filteredBerita) => {
     });
 };
 
-const populateHeadlines = (berita) => {
+const displayHeadlines = (berita) => {
     const currentNewsHead = document.querySelector(".current-news-head");
 
-    const filteredBerita = berita.filter((item) => item.status === "berita-terkini-utama" || item.status === "berita-terpopuler-utama");
-
-    filteredBerita.slice(0, 4).forEach((news) => {
+    berita.slice(0, 4).forEach((news) => {
         const headline = document.createElement("h3");
         headline.innerHTML = `${news.judul} <span>TOPIK: ${news.topik}</span>`;
         currentNewsHead.appendChild(headline);
     });
 };
 
-const beritaBanner = (berita) => {
+const displayBanner = (berita) => {
     const bannerSubContent = document.querySelector(".banner-sub-content");
 
     berita.slice(0, 4).forEach((news) => {
@@ -104,30 +107,26 @@ const beritaBanner = (berita) => {
     });
 };
 
-const beritaTerpopuler = (berita) => {
-    const section = document.getElementById("berita-terpopuler");
-    const containerTopLeft = section.querySelector(".container-top-left");
-
-    const topArticle = containerTopLeft.querySelector("article");
-
-    const containerBottomLeft = section.querySelector(".container-bottom-left");
+const displayBeritaTerpopuler = (berita) => {
+    const containerTopLeft = document.querySelector('.container-top-left');
+    const containerBottomLeft = document.querySelector('.container-bottom-left');
     const bottomArticles = containerBottomLeft.querySelectorAll("article");
 
-    const beritaOlahraga = berita.filter((item) => item.status === "berita-terpopuler-utama");
-
-    if (beritaOlahraga.length >= 3) {
-        const topBerita = beritaOlahraga[0];
-        topArticle.innerHTML = `
-            <img src="${topBerita.gambar}" />
-            <div>
-                <h3>${topBerita.judul}</h3>
-                <p>${topBerita.konten}</p>
-                <a href="${topBerita.sumber}" target="_blank">Baca Berita <span>>></span></a>
-            </div>
+    if (berita.length >= 3) {
+        const topBerita = berita[0];
+        containerTopLeft.innerHTML = `
+            <article>
+                <img src="${topBerita.gambar}" />
+                <div>
+                    <h3>${topBerita.judul}</h3>
+                    <p>${topBerita.konten}</p>
+                    <a href="${topBerita.sumber}" target="_blank">Baca Berita <span>>></span></a>
+                </div>
+            </article>
         `;
 
         for (let i = 1; i <= 2; i++) {
-            const beritaItem = beritaOlahraga[i];
+            const beritaItem = berita[i];
             const bottomArticle = bottomArticles[i - 1];
             bottomArticle.innerHTML = `
                 <img src="${beritaItem.gambar}" />
@@ -141,16 +140,13 @@ const beritaTerpopuler = (berita) => {
     }
 };
 
-const beritaTerkini = (berita) => {
+const displayBeritaTerkini = (berita) => {
     const section = document.getElementById("berita-terkini");
     const articles = section.querySelectorAll("article");
 
-    const beritaCuaca = berita.filter((item) => item.status === "berita-terkini-utama");
-
-    beritaCuaca.slice(0, 5).forEach((news, index) => {
-        const currentArticle = articles[index];
-        if (currentArticle && index < 5) {
-            currentArticle.innerHTML = `
+    berita.slice(0, 5).forEach((news, index) => {
+        if (articles[index]) {
+            articles[index].innerHTML = `
                 <h4>just in</h4>
                 <div>
                     <h2>${news.judul}</h2>
