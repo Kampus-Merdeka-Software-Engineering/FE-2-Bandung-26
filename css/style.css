@@ -57,7 +57,7 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a:focus {
-    color: #ffd700;
+    color: #ffa500;
     background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -84,7 +84,7 @@ main {
     flex-direction: column;
 }
 
-main > section {
+main>section {
     display: flex;
     padding: 0 100px;
     flex-wrap: wrap;
@@ -151,7 +151,7 @@ main section.article-value div {
     display: none;
 }
 
-.carousel > div {
+.carousel>div {
     position: relative;
     flex: 0 0 auto;
     scroll-snap-align: start;
@@ -159,7 +159,7 @@ main section.article-value div {
     overflow: hidden;
 }
 
-.carousel > div::after {
+.carousel>div::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -170,7 +170,7 @@ main section.article-value div {
     z-index: 1;
 }
 
-.carousel > div .text-overlay {
+.carousel>div .text-overlay {
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -188,7 +188,7 @@ main section.article-value div {
     transition: transform 0.3s ease;
 }
 
-.carousel > div:hover img {
+.carousel>div:hover img {
     transform: scale(1.05);
 }
 
@@ -299,12 +299,12 @@ main section.article-value div {
     border-bottom-right-radius: 100px;
 }
 
-.contact-us > a {
+.contact-us>a {
     color: inherit;
     text-decoration: none;
 }
 
-.contact-us > a:hover {
+.contact-us>a:hover {
     color: #ffbd59;
 }
 
