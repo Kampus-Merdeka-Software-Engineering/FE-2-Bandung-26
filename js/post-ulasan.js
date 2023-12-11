@@ -1,9 +1,8 @@
-url = "https://be-2-bandung-26-production.up.railway.app/berita"; // Mengubah action form
+url = "https://be-2-bandung-26-production.up.railway.app/berita";
 
 function postFeedback(event) {
-    event.preventDefault(); // Mencegah pengiriman formulir secara default
+    event.preventDefault();
 
-    // Mengumpulkan data dari formulir
     const formData = {
         nama: document.getElementById("full-name").value,
         email: document.getElementById("email").value,
@@ -11,7 +10,6 @@ function postFeedback(event) {
         pesan: document.getElementById("message").value,
     };
 
-    // Mengirim data dengan Fetch API
     fetch(url, {
         method: "POST",
         headers: {

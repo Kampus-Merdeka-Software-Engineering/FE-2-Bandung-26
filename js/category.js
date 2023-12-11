@@ -2,7 +2,7 @@ const API_URL = "https://be-2-bandung-26-production.up.railway.app";
 
 document.addEventListener("DOMContentLoaded", async () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const topik = urlParams.get('topik');
+    const topik = urlParams.get("topik");
 
     if (topik) {
         await fetchBeritaByTopik(topik);
@@ -15,7 +15,6 @@ const fetchBeritaByTopik = async (topik) => {
         const response = await fetch(endpoint);
         const berita = await response.json();
 
-        console.log(berita);
         searchingAllBerita(berita.data);
         displayHeadlines(berita.data);
         displayBanner(berita.data);
@@ -32,8 +31,7 @@ const searchingAllBerita = (berita) => {
         event.preventDefault();
         const searchTerm = document.getElementById("searchInput").value.toLowerCase();
 
-        const filteredBerita = berita.filter(news => news.judul.toLowerCase().includes(searchTerm));
-        console.log(filteredBerita);
+        const filteredBerita = berita.filter((news) => news.judul.toLowerCase().includes(searchTerm));
 
         updateFrontend(filteredBerita);
     });
@@ -63,7 +61,7 @@ const displayHeadlines = (berita) => {
 
     berita.slice(0, 4).forEach((news) => {
         const headline = document.createElement("h3");
-        headline.innerHTML = `${news.judul} <span>TOPIK: ${news.topik}</span>`;
+        headline.innerHTML = `<a href="${news.sumber}" target="_blank">${news.judul} </a><span>TOPIK: ${news.topik}</span> `;
         currentNewsHead.appendChild(headline);
     });
 };
@@ -77,7 +75,7 @@ const displayBanner = (berita) => {
 
         const img = document.createElement("img");
         img.src = news.gambar;
-        img.alt = "";
+        img.alt = "Banner Berita";
 
         const hotTopicContent = document.createElement("div");
         hotTopicContent.classList.add("hot-topic-content");
@@ -94,6 +92,7 @@ const displayBanner = (berita) => {
         const a = document.createElement("a");
         a.href = news.sumber;
         a.textContent = "Baca Berita";
+        a.target = "_blank";
 
         hotTopicContent.appendChild(h2);
         hotTopicContent.appendChild(h3);
@@ -108,8 +107,8 @@ const displayBanner = (berita) => {
 };
 
 const displayBeritaTerpopuler = (berita) => {
-    const containerTopLeft = document.querySelector('.container-top-left');
-    const containerBottomLeft = document.querySelector('.container-bottom-left');
+    const containerTopLeft = document.querySelector(".container-top-left");
+    const containerBottomLeft = document.querySelector(".container-bottom-left");
     const bottomArticles = containerBottomLeft.querySelectorAll("article");
 
     if (berita.length >= 3) {
@@ -129,7 +128,7 @@ const displayBeritaTerpopuler = (berita) => {
             const beritaItem = berita[i];
             const bottomArticle = bottomArticles[i - 1];
             bottomArticle.innerHTML = `
-                <img src="${beritaItem.gambar}" />
+                <img src="${beritaItem.gambar}" alt="Berita Terpopuler"/>
                 <div>
                     <h3>${beritaItem.judul}</h3>
                     <p>${beritaItem.konten}</p>
@@ -147,13 +146,13 @@ const displayBeritaTerkini = (berita) => {
     berita.slice(0, 5).forEach((news, index) => {
         if (articles[index]) {
             articles[index].innerHTML = `
-                <h4>just in</h4>
+                <h4>baru saja</h4>
                 <div>
                     <h2>${news.judul}</h2>
                     <p>${news.konten}</p>
                     <a href="${news.sumber}" target="_blank">Baca Berita <span>>></span></a>
                 </div>
-                <img src="${news.gambar}" />
+                <img src="${news.gambar}" alt="Berita Terkini"/>
             `;
         }
     });

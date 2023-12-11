@@ -31,16 +31,16 @@ nav-small-screen #nav-small-screen-menu {
     padding-top: 1rem;
 }
 
-nav-small-screen #nav-small-screen-menu > div {
+nav-small-screen #nav-small-screen-menu>div {
     padding: 1rem 0;
 }
 
-nav-small-screen #nav-small-screen-menu > div > a {
+nav-small-screen #nav-small-screen-menu>div>a {
     color: white;
     text-decoration: none;
 }
 
-nav-small-screen #nav-small-screen-menu > div > a:active {
+nav-small-screen #nav-small-screen-menu>div>a:active {
     color: red;
 }
 

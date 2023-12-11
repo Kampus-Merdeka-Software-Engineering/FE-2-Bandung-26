@@ -1,159 +1,134 @@
 <!DOCTYPE html>
 <html class="no-js">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Berita</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="icon" href="assets/logo/icon-transparant.png" />
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    </head>
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Berita</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="icon" href="assets/logo/icon-transparant.png" />
-    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
-</head>
+    <body>
+        <header id="header">
+            <div class="navigation-container">
+                <div class="top-head">
+                    <div class="web-name">
+                        <a href="#"><img src="assets/logo/logo-bg-dark-small.png" alt="Naratif Indonesia" /></a>
+                    </div>
 
-<body>
-    <header id="header">
-        <div class="navigation-container">
-            <div class="top-head">
-                <div class="web-name">
-                    <a href="#"><img src="assets/logo/logo-bg-dark-small.png" alt="Naratif Indonesia" /></a>
+                    <div class="ham-btn">
+                        <span>
+                            <i class="fas fa-bars"></i>
+                        </span>
+                    </div>
+
+                    <div class="times-btn">
+                        <span>
+                            <i class="fas fa-times"></i>
+                        </span>
+                    </div>
                 </div>
 
-                <div class="ham-btn">
-                    <span>
-                        <i class="fas fa-bars"></i>
-                    </span>
+                <div class="nav-bar" id="nav-bar">
+                    <nav>
+                        <ul>
+                            <li><a href="news.html">Beranda</a></li>
+                            <li><a href="category.html?topik=olahraga">Olahraga</a></li>
+                            <li><a href="category.html?topik=politik">Politik</a></li>
+                            <li><a href="category.html?topik=cuaca">Cuaca</a></li>
+                            <li><a href="category.html?topik=teknologi">Teknologi</a></li>
+                            <li><a href="index.html">Tentang Kami</a></li>
+                            <li class="search-item">
+                                <form id="searchForm">
+                                    <input type="text" id="searchInput" placeholder="Cari berita..." />
+                                    <button type="submit" id="searchButton">
+                                        <img src="assets/icon/search-icon.png" alt="Search" />
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
+            </div>
+        </header>
 
-                <div class="times-btn">
-                    <span>
-                        <i class="fas fa-times"></i>
-                    </span>
-                </div>
+        <section class="banner">
+            <div class="banner-main-content">
+                <h2>Informasi cepat, akurat, dapat diandalkan.</h2>
+                <h3>Literasi Bersama Naratif Indonesia</h3>
+
+                <button>
+                    <a href="index.html">Lihat Selengkapnya</a>
+                </button>
+
+                <div class="current-news-head"></div>
             </div>
 
-            <div class="nav-bar" id="nav-bar">
-                <nav>
-                    <ul>
-                        <li><a href="news.html">Beranda</a></li>
-                        <li><a href="category.html?topik=olahraga">Olahraga</a></li>
-                        <li><a href="category.html?topik=politik">Politik</a></li>
-                        <li><a href="category.html?topik=cuaca">Cuaca</a></li>
-                        <li><a href="category.html?topik=teknologi">Teknologi</a></li>
-                        <li><a href="index.html">Tentang Kami</a></li>
-                        <li>
-                            <form id="searchForm">
-                                <input type="text" id="searchInput" placeholder="Cari berita...">
-                                <button type="submit">Cari</button>
-                            </form>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <section class="banner">
-        <div class="banner-main-content">
-            <h2>Informasi cepat, akurat, dapat diandalkan.</h2>
-            <h3>Literasi Bersama Naratif Indonesia</h3>
-
-            <button>
-                <a href="index.html">Lihat Selengkapnya</a>
-            </button>
-
-            <div class="current-news-head">
-            </div>
-        </div>
-
-        <div class="banner-sub-content">
-        </div>
-    </section>
-
-    <hr />
-
-    <main>
-        <section id="berita-terpopuler" class="main-container-left">
-            <h2>Berita Terpopuler</h2>
-            <div class="container-top-left">
-                <article>
-                    <img src="" />
-
-                    <div>
-                        <h3></h3>
-
-                        <p></p>
-
-                        <a href="" target=""> <span>>></span></a>
-                    </div>
-                </article>
-            </div>
-
-            <div class="container-bottom-left">
-                <article>
-                    <img src="" />
-                    <div>
-                        <h3></h3>
-                        <p></p>
-
-                        <a href="" target=""><span>>></span></a>
-                    </div>
-                </article>
-
-                <article>
-                    <img src="" />
-                    <div>
-                        <h3></h3>
-                        <p></p>
-
-                        <a href="" target=""><span>>></span></a>
-                    </div>
-                </article>
-            </div>
+            <div class="banner-sub-content"></div>
         </section>
 
-        <section id="berita-terkini" class="main-container-right">
-            <h2>Berita Terkini</h2>
+        <hr />
 
-            <article>
-                <h4></h4>
-                <div>
-                    <h2></h2>
+        <main>
+            <section id="berita-terpopuler" class="main-container-left">
+                <h2>Berita Terpopuler</h2>
+                <div class="container-top-left">
+                    <article>
+                        <img src="" />
 
-                    <p></p>
+                        <div>
+                            <h3></h3>
 
-                    <a href=""> <span>>></span></a>
+                            <p></p>
+
+                            <a href="" target=""> <span>>></span></a>
+                        </div>
+                    </article>
                 </div>
-                <img src="" />
-            </article>
 
-            <article>
-                <h4></h4>
-                <div>
-                    <h2></h2>
+                <div class="container-bottom-left">
+                    <article>
+                        <img src="" />
+                        <div>
+                            <h3></h3>
+                            <p></p>
 
-                    <p></p>
+                            <a href="" target=""><span>>></span></a>
+                        </div>
+                    </article>
 
-                    <a href=""><span>>></span></a>
+                    <article>
+                        <img src="" />
+                        <div>
+                            <h3></h3>
+                            <p></p>
+
+                            <a href="" target=""><span>>></span></a>
+                        </div>
+                    </article>
                 </div>
-                <img src="" />
-            </article>
+            </section>
 
-            <article>
-                <h4></h4>
-                <div>
-                    <h2></h2>
+            <section id="berita-terkini" class="main-container-right">
+                <h2>Berita Terkini</h2>
 
-                    <p></p>
+                <article>
+                    <h4></h4>
+                    <div>
+                        <h2></h2>
 
-                    <a href=""><span>>></span></a>
-                </div>
-                <img src="" />
-            </article>
+                        <p></p>
 
-            <article>
-                <h4>/h4>
+                        <a href=""> <span>>></span></a>
+                    </div>
+                    <img src="" />
+                </article>
+
+                <article>
+                    <h4></h4>
                     <div>
                         <h2></h2>
 
@@ -162,45 +137,67 @@
                         <a href=""><span>>></span></a>
                     </div>
                     <img src="" />
-            </article>
+                </article>
 
-            <article>
-                <h4></h4>
-                <div>
-                    <h2></h2>
+                <article>
+                    <h4></h4>
+                    <div>
+                        <h2></h2>
 
-                    <p></p>
+                        <p></p>
 
-                    <a href=""><span>>></span></a>
+                        <a href=""><span>>></span></a>
+                    </div>
+                    <img src="" />
+                </article>
+
+                <article>
+                    <h4></h4>
+                    <div>
+                        <h2></h2>
+
+                        <p></p>
+
+                        <a href=""><span>>></span></a>
+                    </div>
+                    <img src="" />
+                </article>
+
+                <article>
+                    <h4></h4>
+                    <div>
+                        <h2></h2>
+
+                        <p></p>
+
+                        <a href=""><span>>></span></a>
+                    </div>
+                    <img src="" />
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-left">
+                    <img src="assets/logo/logo-bg-dark-small.png" alt="Naratif Indonesia" />
+                    <p>portal berita digital berfokus pada penyediaan berita dan analisis mendalam dari berbagai bidang, termasuk politik, ekonomi, sosial, budaya, dan teknologi.</p>
                 </div>
-                <img src="" />
-            </article>
-        </section>
-    </main>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-left">
-                <img src="assets/logo/logo-bg-dark-small.png" alt="Naratif Indonesia" />
-                <p>portal berita digital berfokus pada penyediaan berita dan analisis mendalam dari berbagai
-                    bidang, termasuk politik, ekonomi, sosial, budaya, dan teknologi.</p>
+                <div class="footer-right">
+                    <h2>Komentar</h2>
+                    <p>Tulisan komentarmu sekarang dan jadilah yang pertama berkomentar di sini!</p>
+
+                    <div>
+                        <input type="text" placeholder="Tulis Komentar" />
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                </div>
             </div>
 
-            <div class="footer-right">
-                <h2>Komentar</h2>
-                <p>Tulisan komentarmu sekarang dan jadilah yang pertama berkomentar di sini!</p>
-
-                <div>
-                    <input type="text" placeholder="Tulis Komentar" />
-                    <i class="fas fa-envelope"></i>
-                </div>
-            </div>
-        </div>
-
-        <p>#CakrawalaBerita &copy; 2023 | Naratif Indonesia</p>
-    </footer>
-    <script src="js/script.js" async defer></script>
-    <script src="js/index.js" async defer></script>
-</body>
-
+            <p>#CakrawalaBerita &copy; 2023 | Naratif Indonesia</p>
+        </footer>
+        <script src="js/script.js" async defer></script>
+        <script src="js/index.js" async defer></script>
+    </body>
 </html>
